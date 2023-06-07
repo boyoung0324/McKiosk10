@@ -1,3 +1,5 @@
+package McKiosk10.src;
+
 public class KIOSK {
 
     public static void main(String[] args) {

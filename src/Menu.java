@@ -1,3 +1,5 @@
+package McKiosk10.src;
+
 public class Menu {
 
     String menu;
