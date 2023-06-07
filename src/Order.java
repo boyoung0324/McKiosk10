@@ -30,7 +30,6 @@ public class Order {
     }
 
 
-
     public void count() { //주문 완료했을 때
         requestMsg();
         count++;
@@ -44,9 +43,10 @@ public class Order {
     public void addTotalOrder(List<Menu> list) { //장바구니List를 대기목록List에 저장하는 메서드
         LocalDateTime lt = LocalDateTime.now();
         String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //현재 시간
-        for (int i = 0; i < list.size(); i++) {
-            waitList.add(new Product(count, list.get(i).getName(), list.get(i).getPrice(), request, time, "대기"));
-        }                               //주문번호, 이름, 가격, 요청사항, 현재시간,상태필드 초기화. 객체 생성 후 List에 add
+
+        for (Menu menu : list) {
+            waitList.add(new Product(count, menu.getName(), menu.getPrice(), request, time, "대기"));
+        }
 
     }
 
@@ -70,10 +70,38 @@ public class Order {
 
 
     //대기 목록 메서드
+    public void totalOrderPrint() {
+        System.out.println("[ 대기 주문 목록 ]");
+        waitPrice = 0; //여기서, 0으로 선언 안 하면, 대기목록메서드 실행될 때마다 기존값이 계속 같이 플러스됨
+        for (Product p : waitList) {
+
+            waitPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getState());
+
+        }
+        System.out.printf("[ 대기금액 현황 : %d원 ]\n", waitPrice);
+        ChoiceComplet();
+    }
+
+    //대기 -> 완료로 넘어가는 메서드
+    private void ChoiceComplet() { //완료시킬 상품 선택하는 메서드
+        Scanner sc = new Scanner(System.in);
+        System.out.print("완료하실 상품을 선택해주세요 >>");
+        int choice = sc.nextInt();
+
+
+        for (Product p : waitList) {
+            if (choice == p.getBno()) compList.add(p);
+        }
+
+        waitList.removeIf(s -> s.getBno() == choice);
+    }
+
 
     //완료목록 메서드
 
-    //대기 -> 완료로 넘어가는 메서드
+    //주문현황 메서드
+
 
 
     public Integer getOrderPrice() {

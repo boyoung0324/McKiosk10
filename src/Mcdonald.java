@@ -242,8 +242,8 @@ public class Mcdonald {
 
     public void returnMain() { //메인으로 돌아가는 메서드. 여기저기 끝에 붙여주면 좋음
         Scanner sc = new Scanner(java.lang.System.in);
-        java.lang.System.out.println();
-        java.lang.System.out.println("0. 메인으로 돌아가기");
+        System.out.println();
+        System.out.println("0. 메인으로 돌아가기");
         int choice = sc.nextInt();
         if (choice == 0) {
             kiosk();
