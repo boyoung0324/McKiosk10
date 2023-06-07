@@ -73,6 +73,9 @@ public class Mcdonald {
             case 4:
                 cartList();
                 break;
+            case 5:
+                cancelPrint();
+                break;
 //            case 6:
 //
 //            case 7:
@@ -220,6 +223,21 @@ public class Mcdonald {
             e.printStackTrace();
         }
         kiosk();
+    }
+
+    public void cancelPrint() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("진행하던 주문을 취소하시겠습니까?");
+        System.out.println("1. 확인\t 2. 취소");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            System.out.println("진행하던 주문이 취소되었습니다.");
+            order.clearCart();
+            kiosk();
+        } else if (choice == 2) {
+            kiosk();
+        }
     }
 
     public void returnMain() { //메인으로 돌아가는 메서드. 여기저기 끝에 붙여주면 좋음
