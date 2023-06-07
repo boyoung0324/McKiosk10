@@ -55,6 +55,12 @@ public class Order {
         Scanner sc = new Scanner(System.in);
         System.out.print("요청사항을 작성해주세요 >>");
         request = sc.nextLine();
+        if (request.length() > 0 && request.length() < 21) {
+            return;
+        } else {
+            System.out.println("최대 작성가능 20자");
+            requestMsg();
+        }
     }
 
     public void clearCart() { //장바구니 비우기
