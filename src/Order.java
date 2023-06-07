@@ -22,6 +22,10 @@ public class Order {
         orderList.add(menu);
         orderPrice += menu.price;
     }
+    public void clearCart() { //장바구니 비우기
+        orderList.clear();
+        orderPrice = 0;
+    }
 
     public void orderListPrint() { //장바구니 출력
         int i = 1;
@@ -63,10 +67,7 @@ public class Order {
         }
     }
 
-    public void clearCart() { //장바구니 비우기
-        orderList.clear();
-        orderPrice = 0;
-    }
+
 
 
     //대기 목록 메서드
@@ -84,18 +85,30 @@ public class Order {
     }
 
     //대기 -> 완료로 넘어가는 메서드
-    private void ChoiceComplet() { //완료시킬 상품 선택하는 메서드
+    public void ChoiceComplet() { //완료시킬 상품 선택하는 메서드
         Scanner sc = new Scanner(System.in);
         System.out.print("완료하실 상품을 선택해주세요 >>");
         int choice = sc.nextInt();
 
+        savetotalOrderList2(choice);
+
+
+    }
+
+    public void savetotalOrderList2(int choice) {
+        LocalDateTime lt = LocalDateTime.now();
+        String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //완료시점의 시간
+
 
         for (Product p : waitList) {
-            if (choice == p.getBno()) compList.add(p);
+
+            if (choice == p.getBno())
+                compList.add(new Product(p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), time, "완료"));
         }
 
         waitList.removeIf(s -> s.getBno() == choice);
     }
+
 
 
     //완료목록 메서드
