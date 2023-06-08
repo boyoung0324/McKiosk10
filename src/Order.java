@@ -71,7 +71,7 @@ public class Order {
 
     //대기 목록 메서드
     public void waitListPrint() {
-        System.out.println("[ 대기 주문 목록 ]");
+        System.out.println("[ 주문 대기 목록 ]");
         waitPrice = 0; //여기서, 0으로 선언 안 하면, 대기목록메서드 실행될 때마다 기존값이 계속 같이 플러스됨
         for (Product p : waitList) {
 
@@ -91,7 +91,6 @@ public class Order {
 
         saveCompleteList(choice);
 
-
     }
 
     public void saveCompleteList(int choice) { //대기목록 내용을 완료목록에 저장
@@ -109,9 +108,21 @@ public class Order {
     }
 
 
-    //완료목록 메서드
 
-    //주문현황 메서드
+    public void saveOrderprint() {
+        System.out.println("[ 주문 완료 목록 ]");
+        compPrice = 0;
+        for (Product p : compList) {
+            compPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | 주문완료시간 : %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(),p.getCompletionDate());
+        }
+        System.out.printf("주문 완료 총액 : %d",compPrice);
+    }
+
+
+
+
+
 
 
     public Integer getOrderPrice() {

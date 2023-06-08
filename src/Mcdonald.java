@@ -27,7 +27,6 @@ public class Mcdonald {
         mainManagerList.add(new Menu("상품 삭제", "상품을 삭제합니다."));
     }
 
-
     public void kiosk() { //1번
         System.out.println("-------------------------------------");
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
