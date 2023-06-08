@@ -5,8 +5,7 @@ import java.util.List;
 
 public class Order {
 
-    //조회Read - 주문 후 이루어져야함
-    //수정Update - 주문 후
+ 
 
     List<Menu> orderList = new ArrayList<>(); //장바구니
     List<Product> waitList = new ArrayList<>();//대기 목록
@@ -64,7 +63,7 @@ public class Order {
         if (compList.size() >= 3) {
             recent1();//대기목록이 3이상일 때 작동
         } else if (compList.size() < 3) {
-        recent2();//대기목록이 2개 이하일 때 작동
+            recent2();//대기목록이 2개 이하일 때 작동
         }
         // 대기 목록이 나와야함
         System.out.println("|결제 대기중인 주문목록|");
@@ -115,8 +114,8 @@ public class Order {
 
 
     //대기 목록 메서드
-    public void totalOrderPrint() {
-        System.out.println("[ 대기 주문 목록 ]");
+    public void waitListPrint() {
+        System.out.println("[ 주문 대기 목록 ]");
         waitPrice = 0; //여기서, 0으로 선언 안 하면, 대기목록메서드 실행될 때마다 기존값이 계속 같이 플러스됨
         for (Product p : waitList) {
 
@@ -136,7 +135,6 @@ public class Order {
 
         saveCompleteList(choice);
 
-
     }
 
     public void saveCompleteList(int choice) { //대기목록 내용을 완료목록에 저장
@@ -154,9 +152,16 @@ public class Order {
     }
 
 
-    //완료목록 메서드
 
-    //주문현황 메서드
+    public void compListPrint() {
+        System.out.println("[ 주문 완료 목록 ]");
+        compPrice = 0;
+        for (Product p : compList) {
+            compPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | 주문완료시간 : %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(),p.getCompletionDate());
+        }
+        System.out.printf("주문 완료 총액 : %d",compPrice);
+    }
 
 
     public Integer getOrderPrice() {
