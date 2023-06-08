@@ -66,7 +66,15 @@ public class Order {
         } else if (compList.size() < 3) {
         recent2();//대기목록이 2개 이하일 때 작동
         }
-        totalOrderPrint();
+        // 대기 목록이 나와야함
+        System.out.println("|결제 대기중인 주문목록|");
+        for (Product p : waitList) {
+
+            waitPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getState());
+
+        }
+
 
     }
 
