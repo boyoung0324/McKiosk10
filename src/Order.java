@@ -64,7 +64,7 @@ public class Order {
         System.out.print("요청사항을 작성해주세요 >>");
         request = sc.nextLine();
         if (request.length()>0 && request.length()<21){
-            waitList.get(count).setRequest("요청사항 : "+ request);
+            return;
 
         }else{
             System.out.println("최대 작성가능 20자");
