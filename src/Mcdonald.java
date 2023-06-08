@@ -89,7 +89,7 @@ public class Mcdonald {
                 returnMain();
         }
     }
-    private List<Menu> burgerList = new ArrayList<>();
+    //private List<Menu> burgerList = new ArrayList<>();
 
     public void burgerPrint() {
         java.lang.System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
@@ -104,7 +104,7 @@ public class Mcdonald {
             returnMain();
         }
     }
-    private List<Menu> sideList = new ArrayList<>();
+    //private List<Menu> sideList = new ArrayList<>();
 
     public void sidePrint() {
         java.lang.System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
@@ -120,7 +120,7 @@ public class Mcdonald {
             returnMain();
         }
     }
-    private List<Menu> drinkList = new ArrayList<>();
+   // private List<Menu> drinkList = new ArrayList<>();
 
     public void drinkPrint() {
         java.lang.System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
