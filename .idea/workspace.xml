@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +120,12 @@
       <workItem from="1686193094251" duration="3000" />
       <workItem from="1686193683049" duration="7000" />
       <workItem from="1686193752111" duration="878000" />
+      <workItem from="1686195364098" duration="35000" />
+      <workItem from="1686196238845" duration="211000" />
+      <workItem from="1686196545806" duration="434000" />
+      <workItem from="1686197807822" duration="745000" />
+      <workItem from="1686200169900" duration="6000" />
+      <workItem from="1686204138235" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1686141153028</created>
@@ -144,17 +152,5 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/kby' into kby" />
     <MESSAGE value="order commit" />
     <option name="LAST_COMMIT_MESSAGE" value="order commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/Product.java</url>
-          <line>3</line>
-          <properties field="request" class="Product" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

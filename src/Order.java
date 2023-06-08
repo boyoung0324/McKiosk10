@@ -70,7 +70,7 @@ public class Order {
 
 
     //대기 목록 메서드
-    public void totalOrderPrint() {
+    public void waitListPrint() {
         System.out.println("[ 대기 주문 목록 ]");
         waitPrice = 0; //여기서, 0으로 선언 안 하면, 대기목록메서드 실행될 때마다 기존값이 계속 같이 플러스됨
         for (Product p : waitList) {

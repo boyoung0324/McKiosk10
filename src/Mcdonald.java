@@ -13,14 +13,14 @@ public class Mcdonald {
     } //클래스를 생성하면, init메서드로 List들 초기화
 
     public void init() {
-        mainList.add(new Menu("햄버거", "주문 즉시 바로 조리해 더욱 맛있는, 맥도날드의 다양한 버거를 소개합니다"));
-        mainList.add(new Menu("사이드", "가볍게 즐겨도, 버거와 함께 푸짐하게 즐겨도, 언제나 맛있는 사이드"));
-        mainList.add(new Menu("음료수", "다양한 음료를 부담없이 즐기세요"));
+        mainList.add(new Menu("햄버거", "주문 즉시 바로 조리해 더욱 맛있는, 맥도날드의 다양한 버거를 소개합니다."));
+        mainList.add(new Menu("사이드", "가볍게 즐겨도, 버거와 함께 푸짐하게 즐겨도, 언제나 맛있는 사이드!"));
+        mainList.add(new Menu("음료수", "다양한 음료를 부담없이 즐기세요!"));
 
-        mainOrderList.add(new Menu("장바구니", "장바구니를 확인 후 주문합니다"));
-        mainOrderList.add(new Menu("주문취소", "진행중인 주문을 취소하고 장바구니를 비웁니다"));
+        mainOrderList.add(new Menu("장바구니", "장바구니를 확인 후 주문합니다."));
+        mainOrderList.add(new Menu("주문취소", "진행중인 주문을 취소하고 장바구니를 비웁니다."));
+        mainOrderList.add(new Menu("주문 현황", "최근 주문목록 3건을 보여줍니다."));
 
-        mainManagerList.add(new Menu("주문 현황", "주문 현황을 보여줍니다"));
         mainManagerList.add(new Menu("대기 목록", "대기 중인 주문을 보여줍니다."));
         mainManagerList.add(new Menu("완료 목록", "완료된 주문을 보여줍니다."));
         mainManagerList.add(new Menu("상품 생성", "새 상품을 등록합니다."));
@@ -41,8 +41,7 @@ public class Mcdonald {
         nextnum = mainPrint(nextnum, mainOrderList);
         System.out.println();
 
-        System.out.println("[MANAGER MENU]");
-        mainPrint(nextnum, mainManagerList);
+        System.out.println("0. MANAGER MENU로 이동");
         System.out.println("-------------------------------------");
 
         ChoiceMenu();
@@ -76,18 +75,53 @@ public class Mcdonald {
             case 5:
                 cancelPrint();
                 break;
-//            case 6:
-//
-//            case 7:
-//
-//            case 8:
-//
-//            case 9:
+            case 6:
+                //주문현황
+                break;
 
+            case 0:
+                managerPrint();
+                break;
 
             default:
-                System.out.println("해당하는 메뉴가 없습니다.");
+                java.lang.System.out.println("해당하는 메뉴가 없습니다.");
                 returnMain();
+
+        }
+    }
+
+    public void managerPrint() {
+        java.lang.System.out.println("[MANAGER MENU]");
+        mainPrint(1, mainManagerList);
+        System.out.println();
+        System.out.println("0. MAIN MENU로 이동");
+
+        choiceManagerMenu();
+    }
+
+    public void choiceManagerMenu() {
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                waitPrint(); //대기목록조회
+                break;
+            case 2:
+                //완료목록조회
+                break;
+            case 3:
+               //상품생성
+                break;
+            case 4:
+               //상품삭제
+                break;
+            case 0:
+                kiosk();
+                break;
+
+            default:
+                java.lang.System.out.println("해당하는 메뉴가 없습니다.");
+                returnManagerMenu();
         }
     }
 
@@ -238,6 +272,18 @@ public class Mcdonald {
         }
     }
 
+    public void waitPrint() { //대기 상품 목록
+        if (order.waitList.size() != 0) {
+            order.waitListPrint();
+            java.lang.System.out.println();
+            java.lang.System.out.println("완료되었습니다.");
+            returnManagerMenu();
+        } else {
+            java.lang.System.out.println("[ 대기중인 상품이 없습니다. ]");
+            returnManagerMenu();
+        }
+    }
+
     public void returnMain() { //메인으로 돌아가는 메서드. 여기저기 끝에 붙여주면 좋음
         Scanner sc = new Scanner(System.in);
         System.out.println();
@@ -245,6 +291,17 @@ public class Mcdonald {
         int choice = sc.nextInt();
         if (choice == 0) {
             kiosk();
+        }
+    }
+    public void returnManagerMenu() {
+        Scanner sc = new Scanner(java.lang.System.in);
+        java.lang.System.out.println();
+        java.lang.System.out.println("0. 관리메뉴로 돌아가기");
+        int choice = sc.nextInt();
+        if (choice == 0) {
+            managerPrint();
+        } else {
+            returnManagerMenu();
         }
     }
 
