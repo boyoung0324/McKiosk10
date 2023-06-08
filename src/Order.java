@@ -109,7 +109,7 @@ public class Order {
 
 
 
-    public void saveCompleteList() {
+    public void compListPrint() {
         System.out.println("[ 주문 완료 목록 ]");
         compPrice = 0;
         for (Product p : compList) {
