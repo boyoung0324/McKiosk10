@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="Merge remote-tracking branch 'origin/kby' into kby" />
+    <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InitProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +107,10 @@
       <workItem from="1686141620226" duration="17000" />
       <workItem from="1686152009660" duration="618000" />
       <workItem from="1686183309510" duration="99000" />
+      <workItem from="1686185364542" duration="469000" />
+      <workItem from="1686186387743" duration="1585000" />
+      <workItem from="1686188116731" duration="94000" />
+      <workItem from="1686189686202" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1686141153028</created>
@@ -110,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686141153028</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="order commit">
+      <created>1686185586468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686185586468</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="Merge remote-tracking branch 'origin/kby' into kby" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/kby' into kby" />
+    <MESSAGE value="order commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="order commit" />
   </component>
 </project>

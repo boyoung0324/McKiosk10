@@ -22,6 +22,7 @@ public class Order {
         orderList.add(menu);
         orderPrice += menu.price;
     }
+
     public void clearCart() { //장바구니 비우기
         orderList.clear();
         orderPrice = 0;
@@ -68,8 +69,6 @@ public class Order {
     }
 
 
-
-
     //대기 목록 메서드
     public void totalOrderPrint() {
         System.out.println("[ 대기 주문 목록 ]");
@@ -90,12 +89,12 @@ public class Order {
         System.out.print("완료하실 상품을 선택해주세요 >>");
         int choice = sc.nextInt();
 
-        savetotalOrderList2(choice);
+        saveCompleteList(choice);
 
 
     }
 
-    public void savetotalOrderList2(int choice) {
+    public void saveCompleteList(int choice) {
         LocalDateTime lt = LocalDateTime.now();
         String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //완료시점의 시간
 
@@ -110,11 +109,9 @@ public class Order {
     }
 
 
-
     //완료목록 메서드
 
     //주문현황 메서드
-
 
 
     public Integer getOrderPrice() {
