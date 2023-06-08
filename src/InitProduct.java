@@ -1,5 +1,3 @@
-package McKiosk10.src;
-
 import java.util.*;
 
 public class InitProduct {
