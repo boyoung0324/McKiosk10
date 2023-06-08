@@ -84,6 +84,9 @@ public class Mcdonald {
 //
 //            case 9:
 
+            case 10:
+                order.recentOrder();
+                break;
 
             default:
                 System.out.println("해당하는 메뉴가 없습니다.");
