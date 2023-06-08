@@ -1,5 +1,3 @@
-package McKiosk10.src;
-
 public class Product extends Menu {
 
     Integer bno;
