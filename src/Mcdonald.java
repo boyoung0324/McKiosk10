@@ -123,6 +123,7 @@ public class Mcdonald {
                 returnManagerMenu();
         }
     }
+    //private List<Menu> burgerList = new ArrayList<>();
 
     public void burgerPrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
@@ -137,6 +138,7 @@ public class Mcdonald {
             returnMain();
         }
     }
+    //private List<Menu> sideList = new ArrayList<>();
 
     public void sidePrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
@@ -152,6 +154,7 @@ public class Mcdonald {
             returnMain();
         }
     }
+   // private List<Menu> drinkList = new ArrayList<>();
 
     public void drinkPrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
