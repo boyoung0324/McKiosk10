@@ -46,7 +46,6 @@ public class InitProduct {
                     }
                 }
 
-
             } else {
                 System.out.println("삭제할 상품이 존재하지 않습니다.");
             }
@@ -98,4 +97,6 @@ public class InitProduct {
             }
         }
     }
+
+
 }
