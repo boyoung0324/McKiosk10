@@ -45,7 +45,7 @@ public class Order {
         LocalDateTime lt = LocalDateTime.now();
         String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //현재 시간
         for (int i = 0; i < list.size(); i++) {
-            waitList.add(new Product(count, list.get(i).getName(), list.get(i).getPrice(), request, time, "대기"));
+            waitList.add(new Product(count, list.get(i).getName(), list.get(i).getPrice(), request, time, "대기",""));
         }                               //주문번호, 이름, 가격, 요청사항, 현재시간,상태필드 초기화. 객체 생성 후 List에 add
 
     }
@@ -64,10 +64,53 @@ public class Order {
 
 
     //대기 목록 메서드
+    public void totalOrder() {
+        System.out.println("[ 대기중인 주문 목록 ]");
+        waitPrice = 0;
+        for (Product p : waitList) {
+            waitPrice += p.getPrice();
+            System.out.printf("주문번호 : "+p.getBno() +" | "+ p.getName() +" | " + p.getPrice() + "원 | 요청사항 : " +p.getRequest() + " |  주문일시 : " +p.getOrderDate() +" | " + p.getState());
+        }
+        System.out.printf("");
+        System.out.printf("결제해야 될 금액은 " + waitPrice + "원입니다. ");
+        Mcdonald a = new Mcdonald(); // 초이스메뉴 메서드를 호출하기 위해서 맥도날드 객체 생성.
+        a.ChoiceMenu(); // 초이스메뉴 메서드 호출.
+    }
 
-    //완료목록 메서드
+    public void ChoiceComplet() { //완료시킬 상품 선택하는 메서드
+        Scanner sc = new Scanner(System.in);
+        System.out.print("완료하실 상품을 선택해주세요 >>");
+        int choice = sc.nextInt();
 
-    //대기 -> 완료로 넘어가는 메서드
+        savetotalOrderList2(choice);
+
+
+    }
+
+    public void savetotalOrderList2(int choice) {
+        LocalDateTime lt = LocalDateTime.now();
+        String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //완료시점의 시간
+
+        for (Product p : waitList) {
+
+            if (choice == p.getBno())
+                compList.add(new Product(p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), "주문완료",time));
+        }
+
+        waitList.removeIf(s -> s.getBno() == choice);
+    }
+
+    public void saveOrderprint() {
+        System.out.println("[ 주문 완료 목록 ]");
+        compPrice = 0;
+        for (Product p : compList) {
+            compPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s | 주문완료시간 : %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getState(),p.getSuccessDate());
+        }
+        System.out.printf("주문 완료 총액 : %d",compPrice);
+    }
+
+
 
 
     public Integer getOrderPrice() {
