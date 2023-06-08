@@ -28,56 +28,71 @@ public class InitProduct {
         int choice = sc.nextInt();
         sc.nextLine();
         if (choice == 1) {
-            if (burgerList.size()!=0) {
-                burgerList.stream().forEach(burger -> System.out.println(burger.getName() +"  /  "+ burger.getId()));
+            if (burgerList.size() != 0) {
+                burgerList.stream().forEach(burger -> System.out.println(burger.getName() + "  /  " + burger.getId()));
                 System.out.println("삭제할 상품의 ID값을 입력해주세요.");
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < burgerList.size(); i++) {
                     if (burgerList.get(i).getId() == id) {
                         index = i;
+                        burgerList.remove(index);
+                        System.out.println(" 상품이 삭제되었습니다.\n");
+                        System.out.println("-------------------------------");
+                        break;
+                    } else {
+                        System.out.println("ID값이 일치하지 않습니다.");
                         break;
                     }
                 }
-                burgerList.remove(index);
-                System.out.println(" 상품이 삭제되었습니다.\n");
-                System.out.println("-------------------------------");
+
+
             } else {
                 System.out.println("삭제할 상품이 존재하지 않습니다.");
             }
-        } else if (choice == 2) {
-            if (sideList.size()!=0) {
-                sideList.stream().forEach(side -> System.out.println(side.getName() +"  /  "+ side.getId()));
+        } if (choice == 2) {
+            if (sideList.size() != 0) {
+                sideList.stream().forEach(side -> System.out.println(side.getName() + "  /  " + side.getId()));
                 System.out.println("삭제할 상품의 ID값을 입력해주세요.");
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < sideList.size(); i++) {
                     if (sideList.get(i).getId() == id) {
                         index = i;
+                        sideList.remove(index);
+                        System.out.println(" 상품이 삭제되었습니다.\n");
+                        System.out.println("-------------------------------");
+                        break;
+                    } else {
+                        System.out.println("ID값이 일치하지 않습니다.");
                         break;
                     }
                 }
-                sideList.remove(index);
-                System.out.println(" 상품이 삭제되었습니다.\n");
-                System.out.println("-------------------------------");
+
+
             } else {
                 System.out.println("삭제할 상품이 존재하지 않습니다.");
             }
-        } else if (choice == 3) {
-            if (drinkList.size()!=0) {
-                drinkList.stream().forEach(drink -> System.out.println(drink.getName() +"  /  "+ drink.getId()));
+        } if (choice == 3) {
+            if (drinkList.size() != 0) {
+                drinkList.stream().forEach(drink -> System.out.println(drink.getName() + "  /  " + drink.getId()));
                 System.out.println("삭제할 상품의 ID값을 입력해주세요.");
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < drinkList.size(); i++) {
                     if (drinkList.get(i).getId() == id) {
                         index = i;
+                        drinkList.remove(index);
+                        System.out.println(" 상품이 삭제되었습니다.\n");
+                        System.out.println("-------------------------------");
+                        break;
+                    } else {
+                        System.out.println("ID값이 일치하지 않습니다.");
                         break;
                     }
                 }
-                drinkList.remove(index);
-                System.out.println(" 상품이 삭제되었습니다.\n");
-                System.out.println("-------------------------------");
+
+
             } else {
                 System.out.println("삭제할 상품이 존재하지 않습니다.");
             }
