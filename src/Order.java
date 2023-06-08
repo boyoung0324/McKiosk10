@@ -94,7 +94,7 @@ public class Order {
 
     }
 
-    public void saveCompleteList(int choice) {
+    public void saveCompleteList(int choice) { //대기목록 내용을 완료목록에 저장
         LocalDateTime lt = LocalDateTime.now();
         String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss")); //완료시점의 시간
 

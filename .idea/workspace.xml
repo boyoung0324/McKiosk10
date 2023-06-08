@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InitProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kby" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +45,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk0606&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk10&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -111,6 +109,15 @@
       <workItem from="1686186387743" duration="1585000" />
       <workItem from="1686188116731" duration="94000" />
       <workItem from="1686189686202" duration="610000" />
+      <workItem from="1686191540995" duration="7000" />
+      <workItem from="1686192387801" duration="32000" />
+      <workItem from="1686192428709" duration="9000" />
+      <workItem from="1686193025054" duration="3000" />
+      <workItem from="1686193045971" duration="10000" />
+      <workItem from="1686193084479" duration="3000" />
+      <workItem from="1686193094251" duration="3000" />
+      <workItem from="1686193683049" duration="7000" />
+      <workItem from="1686193752111" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1686141153028</created>
@@ -137,5 +144,17 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/kby' into kby" />
     <MESSAGE value="order commit" />
     <option name="LAST_COMMIT_MESSAGE" value="order commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/Product.java</url>
+          <line>3</line>
+          <properties field="request" class="Product" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
