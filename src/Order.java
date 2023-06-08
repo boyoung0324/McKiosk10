@@ -41,23 +41,31 @@ public class Order {
             System.out.printf("%d. %s | %d원 | %s\n", i++, menu.getName(), menu.getPrice(), menu.getDesc());
     }
 
-
-
-    public void recentOrder(){//최근 주문목록 3개 불러오는 메서드 Arraylist로 대기목록에 작성이 되어서 for문으로 하나씩 불러왔습니다.
-        System.out.println("최근 주문 목록 3개 ");
-        Collections.reverse(compList);
+    public void recent1() {//complist에 저장된 목록들을 불러옵니다. 최대index0부터 2까지 최근주문 목록에서 3개까지 불러오는곳에 쓰임
         for (int i = 0; i < 3; i++) {
             System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
                     compList.get(i).getBno(), compList.get(i).getName(), compList.get(i).getPrice(),
                     compList.get(i).getRequest(), compList.get(i).getOrderDate(), compList.get(i).getState());
 
         }
-//        for (int i=waitList.size()-1; i >waitList.size()-3 ; i--) {
-//            int j = 1;
-//            System.out.wiatListrintln(j + ". " + waitList.get(i).getName()+ ". " +waitList.get(i).getPrice()+ ". " +waitList.get(i).getDesc()+ ". " +waitList.get(i).getRequest());
-//            j++;
-//        }
-        //waitList에 저장된 원소들에서 하나씩 get해와서 출력합니다.
+    }
+
+    public void recent2() {
+        for (int i = 0; i < compList.size(); i++) {
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
+                    compList.get(i).getBno(), compList.get(i).getName(), compList.get(i).getPrice(),
+                    compList.get(i).getRequest(), compList.get(i).getOrderDate(), compList.get(i).getState());
+        }
+    }
+
+    public void recentOrder() {//최근 주문목록 3개 불러오는 메서드 Arraylist로 대기목록에 작성이 되어서 for문으로 하나씩 불러왔습니다.
+        System.out.println("최근 주문 목록 3개 ");
+        Collections.reverse(compList);
+        if (compList.size() >= 3) {
+            recent1();//대기목록이 3이상일 때 작동
+        } else if (compList.size() < 3) {
+        recent2();//대기목록이 2개 이하일 때 작동
+        }
         totalOrderPrint();
 
     }
@@ -88,16 +96,14 @@ public class Order {
         System.out.print("요청사항을 작성해주세요 >>");
         request = sc.nextLine();
 
-        if (request.length()>0 && request.length()<21){
+        if (request.length() > 0 && request.length() < 21) {
             return;
 
-        }else{
+        } else {
             System.out.println("최대 작성가능 20자");
             requestMsg();
         }
     }
-
-
 
 
     //대기 목록 메서드
