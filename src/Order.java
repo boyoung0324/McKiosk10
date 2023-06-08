@@ -5,8 +5,7 @@ import java.util.List;
 
 public class Order {
 
-    //조회Read - 주문 후 이루어져야함
-    //수정Update - 주문 후
+ 
 
     List<Menu> orderList = new ArrayList<>(); //장바구니
     List<Product> waitList = new ArrayList<>();//대기 목록
@@ -118,12 +117,41 @@ public class Order {
         }
         System.out.printf("주문 완료 총액 : %d",compPrice);
     }
+    
+       public void recent1() {//complist에 저장된 목록들을 불러옵니다. 최대index0부터 2까지 최근주문 목록에서 3개까지 불러오는곳에 쓰임
+        for (int i = 0; i < 3; i++) {
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
+                    compList.get(i).getBno(), compList.get(i).getName(), compList.get(i).getPrice(),
+                    compList.get(i).getRequest(), compList.get(i).getOrderDate(), compList.get(i).getState());
 
+        }
+    }
 
+    public void recent2() {
+        for (int i = 0; i < compList.size(); i++) {
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
+                    compList.get(i).getBno(), compList.get(i).getName(), compList.get(i).getPrice(),
+                    compList.get(i).getRequest(), compList.get(i).getOrderDate(), compList.get(i).getState());
+        }
+    }
 
+    public void recentOrder() {//최근 주문목록 3개 불러오는 메서드 Arraylist로 대기목록에 작성이 되어서 for문으로 하나씩 불러왔습니다.
+        System.out.println("최근 주문 목록 3개 ");
+        Collections.reverse(compList);
+        if (compList.size() >= 3) {
+            recent1();//대기목록이 3이상일 때 작동
+        } else if (compList.size() < 3) {
+            recent2();//대기목록이 2개 이하일 때 작동
+        }
+        // 대기 목록이 나와야함
+        System.out.println("|결제 대기중인 주문목록|");
+        for (Product p : waitList) {
 
+            totalPrice += p.getPrice();
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getState());
 
-
+        }
+    }
 
     public Integer getOrderPrice() {
         return orderPrice;
