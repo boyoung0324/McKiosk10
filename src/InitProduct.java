@@ -21,9 +21,4 @@ public class InitProduct {
     //상품 삭제
 
 
-
-
-
-
-
 }

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="">
+
+    <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,14 +49,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/gimdonghwan/McKiosk10&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk10&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -91,10 +95,64 @@
       <workItem from="1686105389912" duration="26000" />
       <workItem from="1686105884967" duration="65000" />
       <workItem from="1686106085427" duration="282000" />
+      <workItem from="1686107656006" duration="126000" />
+      <workItem from="1686108288180" duration="72000" />
+      <workItem from="1686111379961" duration="260000" />
+      <workItem from="1686111811761" duration="978000" />
+      <workItem from="1686114519247" duration="117000" />
+      <workItem from="1686115440027" duration="79000" />
+      <workItem from="1686115966650" duration="37000" />
+      <workItem from="1686120161082" duration="4000" />
+      <workItem from="1686138289813" duration="73000" />
+      <workItem from="1686138422648" duration="503000" />
+      <workItem from="1686140982442" duration="470000" />
+      <workItem from="1686141620226" duration="17000" />
+      <workItem from="1686152009660" duration="618000" />
+      <workItem from="1686183309510" duration="99000" />
+      <workItem from="1686185364542" duration="469000" />
+      <workItem from="1686186387743" duration="1585000" />
+      <workItem from="1686188116731" duration="94000" />
+      <workItem from="1686189686202" duration="610000" />
+      <workItem from="1686191540995" duration="7000" />
+      <workItem from="1686192387801" duration="32000" />
+      <workItem from="1686192428709" duration="9000" />
+      <workItem from="1686193025054" duration="3000" />
+      <workItem from="1686193045971" duration="10000" />
+      <workItem from="1686193084479" duration="3000" />
+      <workItem from="1686193094251" duration="3000" />
+      <workItem from="1686193683049" duration="7000" />
+      <workItem from="1686193752111" duration="878000" />
+      <workItem from="1686195364098" duration="35000" />
+      <workItem from="1686196238845" duration="211000" />
+      <workItem from="1686196545806" duration="434000" />
+      <workItem from="1686197807822" duration="745000" />
+      <workItem from="1686200169900" duration="6000" />
+      <workItem from="1686204138235" duration="466000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1686141153028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686141153028</updated>
+    </task>
+    <task id="LOCAL-00002" summary="order commit">
+      <created>1686185586468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686185586468</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/kby' into kby" />
+    <MESSAGE value="order commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="order commit" />
   </component>
 </project>
