@@ -95,6 +95,7 @@ public class Mcdonald {
 
         if (burgerList != null) {
             //CRUD클래스에서 생성한 상품이 보여지도록. null이 아니면 출력
+
             foodPrint();//생성한 상품의 list를 매개변수로담기
         } else {
             java.lang.System.out.println("상품이 없습니다."); //null이면 메세지 띄움
@@ -157,6 +158,7 @@ public class Mcdonald {
         java.lang.System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
         java.lang.System.out.println("1. 확인\t 2. 취소");
         cartInput(menu);
+
     }
 
 
@@ -166,6 +168,7 @@ public class Mcdonald {
         if (choice == 1) {
             order.cartAdd(menu); //장바구니List에 담는 메서드
             java.lang.System.out.println("장바구니에 추가되었습니다.");
+
             kiosk();
         } else if (choice == 2) {
             kiosk();
