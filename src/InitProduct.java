@@ -34,7 +34,7 @@ public class InitProduct {
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < burgerList.size(); i++) {
-                    if (burgerList.get(i).getId() == id) {
+                    if (burgerList.get(i).getId().equals(id)) {
                         index = i;
                         burgerList.remove(index);
                         System.out.println(" 상품이 삭제되었습니다.\n");
@@ -57,7 +57,7 @@ public class InitProduct {
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < sideList.size(); i++) {
-                    if (sideList.get(i).getId() == id) {
+                    if (sideList.get(i).getId().equals(id)) {
                         index = i;
                         sideList.remove(index);
                         System.out.println(" 상품이 삭제되었습니다.\n");
@@ -80,7 +80,7 @@ public class InitProduct {
                 String id = sc.nextLine();
                 int index = 0;
                 for (int i = 0; i < drinkList.size(); i++) {
-                    if (drinkList.get(i).getId() == id) {
+                    if (drinkList.get(i).getId().equals(id)) {
                         index = i;
                         drinkList.remove(index);
                         System.out.println(" 상품이 삭제되었습니다.\n");
