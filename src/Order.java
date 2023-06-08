@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Order {
 
- 
 
     List<Menu> orderList = new ArrayList<>(); //장바구니
     List<Product> waitList = new ArrayList<>();//대기 목록
@@ -107,18 +106,17 @@ public class Order {
     }
 
 
-
     public void compListPrint() {
         System.out.println("[ 주문 완료 목록 ]");
         compPrice = 0;
         for (Product p : compList) {
             compPrice += p.getPrice();
-            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | 주문완료시간 : %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(),p.getCompletionDate());
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | 주문완료시간 : %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getCompletionDate());
         }
-        System.out.printf("주문 완료 총액 : %d",compPrice);
+        System.out.printf("주문 완료 총액 : %d", compPrice);
     }
-    
-       public void recent1() {//complist에 저장된 목록들을 불러옵니다. 최대index0부터 2까지 최근주문 목록에서 3개까지 불러오는곳에 쓰임
+
+    public void recent1() {//complist에 저장된 목록들을 불러옵니다. 최대index0부터 2까지 최근주문 목록에서 3개까지 불러오는곳에 쓰임
         for (int i = 0; i < 3; i++) {
             System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
                     compList.get(i).getBno(), compList.get(i).getName(), compList.get(i).getPrice(),
@@ -147,7 +145,7 @@ public class Order {
         System.out.println("|결제 대기중인 주문목록|");
         for (Product p : waitList) {
 
-            totalPrice += p.getPrice();
+            waitPrice += p.getPrice();
             System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n", p.getBno(), p.getName(), p.getPrice(), p.getRequest(), p.getOrderDate(), p.getState());
 
         }

@@ -11,6 +11,13 @@ public class Product extends Menu {
     String state;
 
 
+    public Product(Integer bno, String name, Integer price, String request, String orderDate,String state) {
+        super(name, price);
+        this.bno = bno;
+        this.request = request;
+        this.orderDate = orderDate;
+        this.state = state;
+    }
 
     public Product(Integer bno, String name, Integer price, String request, String orderDate,String completionDate,String state) {
         super(name, price);

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InitProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk10&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/McKiosk10&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -128,6 +128,12 @@
       <workItem from="1686197807822" duration="745000" />
       <workItem from="1686200169900" duration="6000" />
       <workItem from="1686204138235" duration="466000" />
+      <workItem from="1686231748866" duration="514000" />
+      <workItem from="1686232318614" duration="4000" />
+      <workItem from="1686232398437" duration="235000" />
+      <workItem from="1686236854924" duration="6000" />
+      <workItem from="1686236888778" duration="5000" />
+      <workItem from="1686236934580" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1686141153028</created>

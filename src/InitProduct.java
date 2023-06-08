@@ -52,6 +52,11 @@ public class InitProduct {
 
     }
 
+    public List<Menu> returnList(String key) {
+        return menuMap.get(key);
+    } //map에 value(List객체)를 반환
+
+
     //상품 삭제
     public void delete() {
         Scanner sc = new Scanner(System.in);
