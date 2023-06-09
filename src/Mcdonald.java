@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Mcdonald {
 
-    private InitProduct ip = new InitProduct();
+    private EditMenu edit = new EditMenu();
     private Order order = new Order();
     private List<Menu> mainList = new ArrayList<>(); //메인화면에서 보여질 List
     private List<Menu> mainOrderList = new ArrayList<>();
@@ -127,7 +127,7 @@ public class Mcdonald {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[BURGER MENU]");
-        List<Menu> burgerList = ip.returnList("햄버거");
+        List<Menu> burgerList = edit.returnList("햄버거");
         if (burgerList != null) {
             foodPrint(burgerList);
         } else {
@@ -140,7 +140,7 @@ public class Mcdonald {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[SIDE MENU]");
-        List<Menu> sideList = ip.returnList("사이드");
+        List<Menu> sideList = edit.returnList("사이드");
         if (sideList != null) {
             foodPrint(sideList);
         } else {
@@ -153,7 +153,7 @@ public class Mcdonald {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[DRINK MENU]");
-        List<Menu> drinkList = ip.returnList("음료수");
+        List<Menu> drinkList = edit.returnList("음료수");
         if (drinkList != null) {
             foodPrint(drinkList);
         } else {
@@ -208,14 +208,14 @@ public class Mcdonald {
     }
 
     private void writeComplet() { //상품등록 완료
-        ip.write();
+        edit.write();
         System.out.println();
         System.out.println("상품이 등록되었습니다. ");
         returnManagerMenu();
     }
 
     private void delComplet() { //지우기 완료
-        ip.delete();
+        edit.delete();
         System.out.println();
         returnManagerMenu();
     }

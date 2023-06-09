@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class InitProduct {
+public class EditMenu {
 
     //Create 상품 생성
     //Delete 상품 삭제
