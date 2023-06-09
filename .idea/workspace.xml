@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="order commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-06-08__11_22__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InitProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
     </list>
@@ -134,6 +134,10 @@
       <workItem from="1686236854924" duration="6000" />
       <workItem from="1686236888778" duration="5000" />
       <workItem from="1686236934580" duration="5000" />
+      <workItem from="1686237033663" duration="7148000" />
+      <workItem from="1686244287694" duration="351000" />
+      <workItem from="1686268306076" duration="1771000" />
+      <workItem from="1686270121486" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1686141153028</created>

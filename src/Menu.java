@@ -2,11 +2,11 @@ import java.util.UUID;
 
 public class Menu {
 
-    String menu;
-    String name;
-    Integer price;
-    String desc;
-    String id;
+    private String menu;
+    private String name;
+    private Integer price;
+    private String desc;
+    private String id;
 
     public Menu(String menu, String desc) { //메뉴 카테고리 출력할 때 사용할 생성자
         this.menu = menu;
@@ -41,5 +41,8 @@ public class Menu {
     public String getDesc() {
         return desc;
     }
-    public String getId(){return id;}
+
+    public String getId() {
+        return id;
+    }
 }

@@ -2,17 +2,17 @@ import java.util.*;
 
 public class Mcdonald {
 
-    InitProduct ip = new InitProduct();
-    Order order = new Order();
-    List<Menu> mainList = new ArrayList<>(); //메인화면에서 보여질 List
-    List<Menu> mainOrderList = new ArrayList<>();
-    List<Menu> mainManagerList = new ArrayList<>();
+    private InitProduct ip = new InitProduct();
+    private Order order = new Order();
+    private List<Menu> mainList = new ArrayList<>(); //메인화면에서 보여질 List
+    private List<Menu> mainOrderList = new ArrayList<>();
+    private List<Menu> mainManagerList = new ArrayList<>();
 
     public Mcdonald() {
         init();
     }
 
-    public void init() {
+    private void init() {
         mainList.add(new Menu("햄버거", "주문 즉시 바로 조리해 더욱 맛있는, 맥도날드의 다양한 버거를 소개합니다"));
         mainList.add(new Menu("사이드", "가볍게 즐겨도, 버거와 함께 푸짐하게 즐겨도, 언제나 맛있는 사이드"));
         mainList.add(new Menu("음료수", "다양한 음료를 부담없이 즐기세요"));
@@ -46,7 +46,7 @@ public class Mcdonald {
         ChoiceMenu();
     }
 
-    public int mainPrint(int num, List<Menu> screen) { //main프린트 해주는 공통 메서드
+    private int mainPrint(int num, List<Menu> screen) { //main프린트 해주는 공통 메서드
         for (int i = 0; i < screen.size(); i++) {
             System.out.printf("%d. %s | %s\n", num++, screen.get(i).getMenu(), screen.get(i).getDesc());
         }
@@ -54,7 +54,7 @@ public class Mcdonald {
     }
 
 
-    public void ChoiceMenu() { //2번
+    private void ChoiceMenu() { //2번
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
 
@@ -75,7 +75,7 @@ public class Mcdonald {
                 cancelPrint();
                 break;
             case 6:
-                order.recentOrder();
+                recentOrderPrint();
                 break;
             case 0:
                 managerPrint();
@@ -87,7 +87,7 @@ public class Mcdonald {
         }
     }
 
-    public void managerPrint() {
+    private void managerPrint() {
         System.out.println("[MANAGER MENU]");
         mainPrint(1, mainManagerList);
         System.out.println();
@@ -96,7 +96,7 @@ public class Mcdonald {
         choiceManagerMenu();
     }
 
-    public void choiceManagerMenu() {
+    private void choiceManagerMenu() {
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
         switch (choice) {
@@ -123,9 +123,7 @@ public class Mcdonald {
     }
 
 
-
-
-    public void burgerPrint() {
+    private void burgerPrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[BURGER MENU]");
@@ -138,7 +136,7 @@ public class Mcdonald {
         }
     }
 
-    public void sidePrint() {
+    private void sidePrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[SIDE MENU]");
@@ -151,7 +149,7 @@ public class Mcdonald {
         }
     }
 
-    public void drinkPrint() {
+    private void drinkPrint() {
         System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
         System.out.println("↓ 아래 메뉴판을 골라 입력해주세요.\n");
         System.out.println("[DRINK MENU]");
@@ -166,14 +164,14 @@ public class Mcdonald {
     }
 
 
-    void foodPrint(List<Menu> foodList) { //음식 프린트 공동 사용
+     private void foodPrint(List<Menu> foodList) { //음식 프린트 공동 사용
         for (int i = 0; i < foodList.size(); i++) {
-            System.out.printf("%d. %s | %d원 | %s\n", i + 1, foodList.get(i).name, foodList.get(i).price, foodList.get(i).desc);
+            System.out.printf("%d. %s | %d원 | %s\n", i + 1, foodList.get(i).getName(), foodList.get(i).getPrice(), foodList.get(i).getDesc());
         }
         foodChoice(foodList);
     }
 
-    void foodChoice(List<Menu> foodList) { //음식 선택 메서드 공동 사용
+    private void foodChoice(List<Menu> foodList) { //음식 선택 메서드 공동 사용
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
         if (choice >= 1 && choice <= foodList.size()) { //메뉴번호 1,2,3,4
@@ -186,7 +184,7 @@ public class Mcdonald {
 
     }
 
-    void orderCart(Menu menu) { //공통 메서드2
+    private void orderCart(Menu menu) { //공통 메서드2
         System.out.printf("[%s | %d원 | %s]\n", menu.getName(), menu.getPrice(), menu.getDesc());
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
         System.out.println("1. 확인\t 2. 취소");
@@ -194,7 +192,7 @@ public class Mcdonald {
     }
 
 
-    void cartInput(Menu menu) { //공통 메서드 3
+    private void cartInput(Menu menu) { //공통 메서드 3
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
         if (choice == 1) {
@@ -209,21 +207,22 @@ public class Mcdonald {
         }
     }
 
-    void writeComplet() { //상품등록 완료
+    private void writeComplet() { //상품등록 완료
         ip.write();
         System.out.println();
         System.out.println("상품이 등록되었습니다. ");
         returnManagerMenu();
     }
 
-    void delComplet() { //지우기 완료
+    private void delComplet() { //지우기 완료
         ip.delete();
-
+        System.out.println();
         returnManagerMenu();
     }
 
 
-    public void cartList() {
+
+    private void cartList() {
         if (order.orderList.size() != 0) {
 
             System.out.println("[Order]");
@@ -244,7 +243,7 @@ public class Mcdonald {
 
     }
 
-    void orderInput() {
+    private void orderInput() {
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
         if (choice == 1) {
@@ -257,7 +256,7 @@ public class Mcdonald {
         }
     }
 
-    public void orderSuccess() { //주문 완료
+    private void orderSuccess() { //주문 완료
         order.count();
         try {
             Thread.sleep(3000);
@@ -267,10 +266,15 @@ public class Mcdonald {
         kiosk();
     }
 
-    public void returnMain() {
+    private void recentOrderPrint() { //주문현황
+        order.recentOrder();
+        returnMain();
+    }
+
+    private void returnMain() {
         Scanner sc = new Scanner(System.in);
         System.out.println();
-        System.out.println("0. 메인으로 돌아가기");
+        System.out.println("0. MAIN MENU로 이동");
         int choice = sc.nextInt();
         if (choice == 0) {
             kiosk();
@@ -279,10 +283,10 @@ public class Mcdonald {
         }
     }
 
-    public void returnManagerMenu() {
+    private void returnManagerMenu() {
         Scanner sc = new Scanner(System.in);
         System.out.println();
-        System.out.println("0. 관리메뉴로 돌아가기");
+        System.out.println("0. MANAGER MENU로 이동");
         int choice = sc.nextInt();
         if (choice == 0) {
             managerPrint();
@@ -291,7 +295,7 @@ public class Mcdonald {
         }
     }
 
-    public void waitPrint() { //대기 상품 목록
+    private void waitPrint() { //대기 상품 목록
         if (order.waitList.size() != 0) {
             order.waitListPrint();
             System.out.println();
@@ -303,7 +307,7 @@ public class Mcdonald {
         }
     }
 
-    public void completionPrint() { //완료 상품 목록
+    private void completionPrint() { //완료 상품 목록
         if (order.compList.size() != 0) {
             order.compListPrint();
             returnManagerMenu();
@@ -313,7 +317,7 @@ public class Mcdonald {
         }
     }
 
-    public void cancelPrint() {
+    private void cancelPrint() {
         Scanner sc = new Scanner(System.in);
         System.out.println("진행하던 주문을 취소하시겠습니까?");
         System.out.println("1. 확인\t 2. 취소");

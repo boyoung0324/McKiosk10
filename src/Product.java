@@ -4,14 +4,14 @@ import java.time.format.DateTimeFormatter;
 
 public class Product extends Menu {
 
-    Integer bno;
-    String request; //요청사항
-    String orderDate; //주문일시
-    String completionDate; //완료일시
-    String state;
+     private Integer bno;
+     private String request; //요청사항
+     private String orderDate; //주문일시
+     private String completionDate; //완료일시
+     private String state;
 
 
-    public Product(Integer bno, String name, Integer price, String request, String orderDate,String state) {
+    public Product(Integer bno, String name, Integer price, String request, String orderDate, String state) {
         super(name, price);
         this.bno = bno;
         this.request = request;
@@ -19,7 +19,7 @@ public class Product extends Menu {
         this.state = state;
     }
 
-    public Product(Integer bno, String name, Integer price, String request, String orderDate,String completionDate,String state) {
+    public Product(Integer bno, String name, Integer price, String request, String orderDate, String completionDate, String state) {
         super(name, price);
         this.bno = bno;
         this.request = request;
@@ -46,10 +46,7 @@ public class Product extends Menu {
         return state;
     }
 
-    public void setState(String state) {
-        this.state = state;
-    }
-     public String getCompletionDate() {
+    public String getCompletionDate() {
         return completionDate;
     }
 
